@@ -799,7 +799,7 @@
       btn.disabled = true;
 
       try {
-        const response = await fetch(`/api/search?q=${query}&mode=${mode}`);
+        const response = await fetch(`/api/search?q=${encodeURIComponent(q)}&mode=${searchMode}`);
 
         const data = await response.json();
 
